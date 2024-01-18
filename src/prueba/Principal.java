@@ -23,12 +23,12 @@ public class Principal {
 		Ruleta ruleta = new Ruleta (nombre);
 		
 		// Llamamos a la función para cargar el cargador
-		Ruleta.cargaCargador;
+		ruleta.cargaCargador();
 		do {
 			System.out.println("Procedemos a disparar");
-			Ruleta.dispara (posicion);
+			ruleta.dispara (posicion);
 			
-			if (Ruleta.dispara (posicion)) {
+			if (ruleta.dispara (posicion)) {
 				System.out.println("Acabo tu partida, moriste.");
 				muerto = true;
 				break;
@@ -36,7 +36,7 @@ public class Principal {
 			
 			valorPremio += 100;
 			System.out.println("Te salvaste");
-			System.out.println("Has conseguido: " + valorPremio);
+			System.out.println("Has conseguido: " + valorPremio + " euros");
 			System.out.println("¿Quiere continuar? (Cada disparo suma 100 euros) SI    NO");
 			continuar = sc.nextLine();
 			
@@ -49,8 +49,10 @@ public class Principal {
 			System.out.println("Enhorabuena lograste salvarte de todas las balas, serás recompensado con 500 euros extra");
 			System.out.println("Has conseguido un total de: " + (valorPremio +=500) + " euros");
 		} else if (!muerto) {
-			System.out.println("Has ganado un total de: " + valorPremio);
+			System.out.println("Has ganado un total de: " + valorPremio + " euros");
 		}
+		
+		sc.close();
 	}
 
 }
