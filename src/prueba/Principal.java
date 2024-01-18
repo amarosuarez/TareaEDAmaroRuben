@@ -37,7 +37,7 @@ public class Principal {
 			valorPremio += 100;
 			System.out.println("Te salvaste");
 			System.out.println("Has conseguido: " + valorPremio + " euros");
-			
+			posicion++;
 			if (posicion < 5) {
 				System.out.println("¿Quiere continuar? (Cada disparo suma 100 euros) SI    NO");
 				continuar = sc.nextLine();
@@ -45,7 +45,7 @@ public class Principal {
 			}
 			
 			
-			posicion++;
+
 		}while (posicion < 5 && continuar.equalsIgnoreCase("SI"));
 		
 		
