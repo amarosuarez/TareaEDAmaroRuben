@@ -8,7 +8,7 @@ public class Principal {
 		
 		String nombre;
 		
-		String continuar;
+		String continuar = "SI";
 		
 		int posicion = 0;
 		
@@ -37,19 +37,23 @@ public class Principal {
 			valorPremio += 100;
 			System.out.println("Te salvaste");
 			System.out.println("Has conseguido: " + valorPremio + " euros");
-			System.out.println("¿Quiere continuar? (Cada disparo suma 100 euros) SI    NO");
-			continuar = sc.nextLine();
+			
+			if (posicion < 5) {
+				System.out.println("¿Quiere continuar? (Cada disparo suma 100 euros) SI    NO");
+				continuar = sc.nextLine();
+					
+			}
 			
 			
 			posicion++;
-		}while (posicion < 6 && continuar.equalsIgnoreCase("SI"));
+		}while (posicion < 5 && continuar.equalsIgnoreCase("SI"));
 		
 		
-		if (posicion == 6) {
-			System.out.println("Enhorabuena lograste salvarte de todas las balas, serás recompensado con 500 euros extra");
-			System.out.println("Has conseguido un total de: " + (valorPremio +=500) + " euros");
+		if (posicion == 5) {
+			System.out.println("Enhorabuena" + nombre + ", lograste salvarte de todas las balas, serás recompensado con 500 euros extra");
+			System.out.println(nombre + ", has conseguido un total de: " + (valorPremio +=500) + " euros");
 		} else if (!muerto) {
-			System.out.println("Has ganado un total de: " + valorPremio + " euros");
+			System.out.println(nombre +", has ganado un total de: " + valorPremio + " euros");
 		}
 		
 		sc.close();
