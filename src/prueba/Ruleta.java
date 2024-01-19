@@ -42,7 +42,7 @@ public class Ruleta {
 		boolean bala = false;
 		
 		// Generamos la posición
-		num = (int) (Math.random() * 6 + 1);
+		num = (int) (Math.random() * 6);
 		
 		// Bucle para rellenar el cargador
 		for (int i=0; i<cargador.length; i++) {
