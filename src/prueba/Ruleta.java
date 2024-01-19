@@ -43,6 +43,7 @@ public class Ruleta {
 		
 		// Generamos la posición
 		num = (int) (Math.random() * 6);
+		System.out.println(num);
 		
 		// Bucle para rellenar el cargador
 		for (int i=0; i<cargador.length; i++) {
